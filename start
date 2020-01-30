@@ -17,4 +17,13 @@ fi
 sed -i "s/__CF_ACCOUNT_ID__/$CF_ACCOUNT_ID/g" wrangler.toml
 sed -i "s/__CF_APP_NAME__/$CF_APP_NAME/g" wrangler.toml
 
+if [[ $CF_ROUTE ]]; then
+  echo "route = \"$CF_ROUTE\"" >> wrangler.toml
+  sed -i "s/workers_dev = true/workers_dev = false/g" wrangler.toml
+fi
+
+if [[ $CF_ZONE_ID ]]; then
+  echo "zone_id = \"$CF_ZONE_ID\"" >> wrangler.toml
+fi
+
 wrangler publish
