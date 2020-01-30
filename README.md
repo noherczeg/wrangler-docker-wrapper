@@ -15,7 +15,7 @@ docker run -it --rm \
   -e CF_API_TOKEN="YOUR_API_TOKEN" \
   -e CF_APP_NAME="NAME_OF_YOUR_APP" \
   -v $(pwd)/project/public:/opt/project/public \ 
-  noherczeg/wrangler-docker-wrapper:1.0.2
+  noherczeg/wrangler-docker-wrapper:1.1.0
 ```
 
 ### Production
@@ -29,7 +29,7 @@ docker run -it --rm \
   -e CF_ZONE_ID="YOUR_ZONE_ID" \
   -e CF_ROUTE="ROUTE_TO_WORKER" \
   -v $(pwd)/project/public:/opt/project/public \
-  noherczeg/wrangler-docker-wrapper:1.0.2
+  noherczeg/wrangler-docker-wrapper:1.1.0
 ```
 
 ## Additional ENV variables
