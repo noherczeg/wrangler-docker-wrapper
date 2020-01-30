@@ -1,6 +1,19 @@
 #!/bin/bash
 
 cd /opt/project
+
+if [[ $NPM_REGISTRY ]]; then
+  npm config set registry $NPM_REGISTRY
+fi
+
+if [[ $NPM_HTTP_PROXY ]]; then
+  npm config set proxy $NPM_HTTP_PROXY
+fi
+
+if [[ $NPM_HTTPS_PROXY ]]; then
+  npm config set https-proxy $NPM_HTTPS_PROXY
+fi
+
 sed -i "s/__CF_ACCOUNT_ID__/$CF_ACCOUNT_ID/g" wrangler.toml
 sed -i "s/__CF_APP_NAME__/$CF_APP_NAME/g" wrangler.toml
 
