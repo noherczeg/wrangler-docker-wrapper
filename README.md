@@ -19,7 +19,7 @@ docker run -it --rm \
 ```
 
 ### Production
-Specifying the _CF_ROUTE_ ENV variable turns off workders.dev deployment.
+Specifying the _CF_ROUTE_ environment variable turns off workders.dev deployment.
 
 ```
 docker run -it --rm \
@@ -32,15 +32,12 @@ docker run -it --rm \
   noherczeg/wrangler-docker-wrapper:1.1.0
 ```
 
-## Additional ENV variables
+## Additional environment variables
 - NPM_REGISTRY
 - NPM_HTTP_PROXY
 - NPM_HTTPS_PROXY
 
 > You are not expected to rely on these.
-
-## TODO
-- Provide production deploy capability
 
 ## Resources
 
