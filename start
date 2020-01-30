@@ -1,0 +1,7 @@
+#!/bin/bash
+
+cd /opt/project
+sed -i "s/__CF_ACCOUNT_ID__/$CF_ACCOUNT_ID/g" wrangler.toml
+sed -i "s/__CF_APP_NAME__/$CF_APP_NAME/g" wrangler.toml
+
+wrangler publish

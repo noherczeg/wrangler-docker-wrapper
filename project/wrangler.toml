@@ -1,0 +1,5 @@
+account_id = "__CF_ACCOUNT_ID__"
+name = "__CF_APP_NAME__"
+type = "webpack"
+workers_dev = true
+site = { bucket = "./public" }
