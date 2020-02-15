@@ -6,6 +6,8 @@ This image contains everything necessary to publish with `wrangler`, no addition
 ## Deploy
 Static web folder **MUST** be mapped to `/opt/project/public`.
 
+> You might want to use different `CF_APP_NAME` for _prod_ and _dev_ modes to prevent potential name collisions for your Workers
+
 ### Dev
 Will deploy to _*.workers.dev_.
 
