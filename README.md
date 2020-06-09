@@ -39,7 +39,7 @@ This Container uses a default script ([./project/workers-site/index.js]()).
 
 You can override the script by mapping your own file when running the Container.
 ```
--v SOME_PATH/index.js:/opt/project/workers-site/index.js \
+-v SOME_PATH/index.js:/opt/project/workers-site/index.js
 ```
 
 ## Additional environment variables
