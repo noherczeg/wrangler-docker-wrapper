@@ -34,6 +34,14 @@ docker run -it --rm \
   noherczeg/wrangler-docker-wrapper:1.1.0
 ```
 
+## Overriding Worker Script
+This Container uses a default script ([./project/workers-site/index.js]()).
+
+You can override the script by mapping your own file when running the Container.
+```
+-v SOME_PATH/index.js:/opt/project/workers-site/index.js \
+```
+
 ## Additional environment variables
 - NPM_REGISTRY
 - NPM_HTTP_PROXY

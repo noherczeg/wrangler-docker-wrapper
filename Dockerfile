@@ -3,15 +3,15 @@ FROM node:12.14.1-buster
 WORKDIR /opt
 
 # Download Wrangler
-RUN wget https://github.com/cloudflare/wrangler/releases/download/v1.6.0/wrangler-v1.6.0-x86_64-unknown-linux-musl.tar.gz
-RUN tar -xzvf wrangler-v1.6.0-x86_64-unknown-linux-musl.tar.gz
-RUN rm wrangler-v1.6.0-x86_64-unknown-linux-musl.tar.gz
-RUN ln -s /opt/wrangler-v1.6.0-x86_64-unknown-linux-musl/wrangler /usr/local/bin/wrangler
+RUN wget https://github.com/cloudflare/wrangler/releases/download/v1.9.2/wrangler-v1.9.2-x86_64-unknown-linux-musl.tar.gz
+RUN tar -xzvf wrangler-v1.9.2-x86_64-unknown-linux-musl.tar.gz
+RUN rm wrangler-v1.9.2-x86_64-unknown-linux-musl.tar.gz
+RUN ln -s /opt/dist/wrangler /usr/local/bin/wrangler
 
 # Download transitive tools
 RUN npm config set -g user root
-RUN npm i -g wasm-pack
-RUN npm i -g wrangler-js
+RUN npm i -g wasm-pack@0.9.1
+RUN npm i -g wrangler-js@0.1.11
 RUN npm config rm -g user
 
 # Copy technical requirements
