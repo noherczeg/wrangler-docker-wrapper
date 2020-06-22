@@ -3,9 +3,9 @@ FROM node:12.14.1-buster
 WORKDIR /opt
 
 # Download Wrangler
-RUN wget https://github.com/cloudflare/wrangler/releases/download/v1.9.2/wrangler-v1.9.2-x86_64-unknown-linux-musl.tar.gz
-RUN tar -xzvf wrangler-v1.9.2-x86_64-unknown-linux-musl.tar.gz
-RUN rm wrangler-v1.9.2-x86_64-unknown-linux-musl.tar.gz
+RUN wget https://github.com/cloudflare/wrangler/releases/download/v1.10.1/wrangler-v1.10.1-x86_64-unknown-linux-musl.tar.gz
+RUN tar -xzvf wrangler-v1.10.1-x86_64-unknown-linux-musl.tar.gz
+RUN rm wrangler-v1.10.1-x86_64-unknown-linux-musl.tar.gz
 RUN ln -s /opt/dist/wrangler /usr/local/bin/wrangler
 
 # Download transitive tools
